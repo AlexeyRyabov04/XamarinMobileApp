@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
+        <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
+        <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+        <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+        <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Java.Interop">
+        <HintPath>..\..\..\..\Downloads\Java.Interop.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Android">
+        <HintPath>C:\Users\alexey\AppData\Local\JetBrains\BuildTools\ReferenceAssemblies\MonoAndroid\v11.0\Mono.Android.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>

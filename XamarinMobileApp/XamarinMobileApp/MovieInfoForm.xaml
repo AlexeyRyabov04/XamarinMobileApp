@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="http://rotorgames.com"
+                 x:Class="XamarinMobileApp.MovieInfoForm">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <CarouselView Grid.Row="0" Margin="0" IsBounceEnabled="True" ItemsSource="{Binding ImageCollection}"
+                      IndicatorView="indicatorView" x:Name="Carousel">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    
+                        <Image Source="{Binding Url}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" />
+                     
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView Grid.Row="1" Margin="0, 0, 0, 20" VerticalOptions="EndAndExpand" x:Name="indicatorView"
+                       IndicatorColor="Gray" SelectedIndicatorColor="#a32e9a" HorizontalOptions="Center"></IndicatorView>
+        <Label Grid.Row="2" x:Name="title"/>
+        <Label Grid.Row="3" x:Name="producer"/>
+        <Label Grid.Row="4" x:Name="description"/>
+        <Button Grid.Row="5" 
+                Text="{Binding ButtonText}"
+                x:Name="addButton" Clicked="AddToFavorites"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0" 
+                CornerRadius="20"
+                BackgroundColor="Goldenrod"/>
+    </Grid>
+    
+</ContentPage>

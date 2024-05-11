@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMobileApp.RegisterForm">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Регистрация" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+            
+            <Entry Placeholder="Почта" x:Name="usernameEntry" />
+            <Entry Placeholder="Пароль" x:Name="passwordEntry" IsPassword="True" />
+            <Entry Placeholder="Повторите пароль" x:Name="passwordRetype" IsPassword="True" />
+
+            <Button Text="Зарегистрироваться" Clicked="OnRegisterClicked" HorizontalOptions="Center" Margin="0,20,0,0" />
+
+            <Label Text="Есть аккаунт?" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0" />
+            <Label Text="Войти" TextColor="Blue" FontAttributes="Bold" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLoginTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
